@@ -1,0 +1,18 @@
+.hoverable>a:after {
+    content: "\25BC";
+    font-size: 8px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.megaMenu {
+    transition: all 0.15s linear 0.1;
+
+}
+
+.hoverable:hover .megaMenu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 900;
+}
