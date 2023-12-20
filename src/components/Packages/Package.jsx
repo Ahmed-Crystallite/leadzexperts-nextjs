@@ -13,13 +13,10 @@ const Package = () => {
     function prices(tabs1) {
         setActiveTab1(tabs1);
     }
-    const packagesTab1 = [
-        {}
-    ]
     return (
         <>
             <div className='bg-white shadow-[2px_2px_20px_rgb(0,0,0,70%)] w-[400px] mx-auto py-5 rounded-2xl mt-10 flex justify-center gap-x-5'>
-                <button onClick={() => prices("tab1")} className={`text-base font-bold duration-300 ease-in-out hover:text-[#0056b3] active:bg-black active:text-white block`}>MONTHLY<span className='text-sm block'>(SAVE 10%)</span></button>
+                <button onClick={() => prices("tab1")}  className={`text-base font-bold duration-300 ease-in-out hover:text-[#0056b3] active:bg-black active:text-white block`}>MONTHLY<span className='text-sm block'>(SAVE 10%)</span></button>
                 <button onClick={() => prices("tab2")} className={`text-base font-bold duration-300 ease-in-out hover:text-[#0056b3] active:bg-black active:text-white block`}>QUARTERLY<span className='text-sm block'>(SAVE 25%)</span></button>
                 <button onClick={() => prices("tab3")} className={`text-base font-bold duration-300 ease-in-out hover:text-[#0056b3] active:bg-black active:text-white block`}>ANNUALLY<span className='text-sm block'>(SAVE 33%)</span></button>
             </div>

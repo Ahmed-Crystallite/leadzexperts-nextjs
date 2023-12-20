@@ -2,7 +2,7 @@ import Package from "../Packages/Package";
 
 const Pricing = () => {
   return (
-    <div className="">
+    <div className="pb-20">
       <div className="container">
         <div className="text-center w-[85%] mx-auto">
             <h2 className="text-[40px] leading-[50px] font-extrabold text-black mb-2">LeadzExperts Helps You Fly High Without Hitting Your Wallet So HARD!</h2>
