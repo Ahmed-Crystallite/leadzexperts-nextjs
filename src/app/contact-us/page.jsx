@@ -6,7 +6,7 @@ import Info from "@/components/Contact-us/Info";
 const page = () => {
     return (
       <>
-      <Header padding="py-1"/>
+      <Header padding="py-1" bg="bg-black"/>
       <GetInTouch/>
       <Info/>
       <Footer/>

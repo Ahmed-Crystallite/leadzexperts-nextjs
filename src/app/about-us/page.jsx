@@ -8,7 +8,7 @@ import Form from "@/components/Home/Form";
 const page = () => {
   return (
     <>
-    <Header padding="py-1"/>
+    <Header padding="py-1" bg="bg-black"/>
     <About/>
     <AboutServices/>
     <Form 

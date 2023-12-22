@@ -11,7 +11,11 @@ const Header = ({
     padding = "md:pt-6 pt-6 pb-3",
     bg,
     ctaHover = "hover:text-white hover:bg-primary",
+    ctaBg = "md:bg-white bg-primary",
+    ctaColor = "md:text-primary text-black",
+    ctaRadius = "rounded-xl",
     linkHover = "hover:text-primary",
+    iconCss = "group-hover:brightness-100 group-hover-invert",
 }) => {
     const [toggler, setToggler] = useState(false);
     const [openSubMenu, setopenSubMenu] = useState(false);
@@ -68,7 +72,7 @@ const Header = ({
                             </li>
                             <li className="md:text-white md:mb-0 mb-5 text-black"><Link href="./about-us" className={`relative block transition-all duration-500 ease-in-out text-sm lg:text-base font-medium ${linkHover}`}>About</Link></li>
                             <li className="md:text-white md:mb-0 mb-5 text-black"><Link href="./contact-us" className={`relative block transition-all duration-500 ease-in-out text-sm lg:text-base font-medium ${linkHover}`}>Contact</Link></li>
-                            <CTA text="(346)-299-2221" margin="my-3" rounded="rounded-xl" width="w-max" padding="px-5" height="h-10" bg="md:bg-white bg-primary" color="md:text-primary text-black" hover={`${ctaHover}`} iconCss="group-hover:brightness-100 group-hover-inver-1" />
+                            <CTA text="(346)-299-2221" margin="my-3" rounded={ctaRadius} width="w-max" padding="px-5" height="h-10" bg={ctaBg} color={ctaColor} hover={`${ctaHover}`} iconCss={iconCss} />
                         </ul>
                     </nav>
                 </div>

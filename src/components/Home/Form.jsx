@@ -4,8 +4,11 @@ import Input from "C/Input/Input";
 const Form = ({
     background = "bg-[url('../../public/home/formBg.png')]",
     spanColor = "text-yellow ",
+    CTAbg = "bg-white",
+    CTAtext = "text-black",
     CTABackground = "bg-primary",
     beforeBackground = "before:bg-[url('../../public/home/line.png')]",
+    textColor = "text-white "
 }) => {
     return (
         <section>
@@ -13,12 +16,12 @@ const Form = ({
                 <div className="container">
                     <div className="lg:flex lg:flex-wrap grid md:grid-cols-2 grid-cols-1 gap-4 items-center justify-between">
                         <div className="lg:basis-7/12">
-                            <h2 className="xl:text-[40px] xl:leading-[50px] md:text-[30px] md:leading-[40px] text-[25px] leading-[35px] text-white font-berlin lg:pb-8 pb-6">Get your free <span className={`${spanColor} relative ${beforeBackground} before:bg-no-repeat before:bg-cover before:bg-center before:absolute before:w-full xl:before:top-11 before:top-8 xs:before:hidden before:left-0 before:h-2`}>30 minute</span> strategy session with an experienced digital marketer valued at <span className={`${spanColor}`}>$300USD.</span></h2>
+                            <h2 className={`xl:text-[40px] xl:leading-[50px] md:text-[30px] md:leading-[40px] text-[25px] ${textColor} leading-[35px] font-berlin lg:pb-8 pb-6`}>Get your free <span className={`${spanColor} relative ${beforeBackground} before:bg-no-repeat before:bg-cover before:bg-center before:absolute before:w-full xl:before:top-11 before:top-8 xs:before:hidden before:left-0 before:h-2`}>30 minute</span> strategy session with an experienced digital marketer valued at <span className={`${spanColor}`}>$300USD.</span></h2>
                             <CTA
                                 text="GET MY FREE 30 MINUTES STRATEGY SESSION"
-                                bg="bg-white"
+                                bg={CTAbg}
                                 icon=""
-                                color="text-black"
+                                color={CTAtext}
                                 width="w-max lg:block hidden"
                                 height="h-10"
                                 padding="lg:px-10 px-2 py-2"

@@ -5,7 +5,7 @@ import aboutIcon from "media/about-us/aboutUs.png"
 const About = () => {
   return (
     <section>
-      <div className="lg:py-16 md:py-12 py-10">
+      <div className="md:pt-32 pt-28 pb-12">
       <div className="container">
         <div className="grid gap-7 items-center md:grid-cols-2 grid-cols-1">
           <div>

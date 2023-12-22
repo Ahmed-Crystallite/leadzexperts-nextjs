@@ -6,7 +6,7 @@ import CTA from '../CTA/CTA';
 const getInTouch = () => {
     return (
         <section>
-            <div className='md:pt-16 md:pb-20 py-12'>
+            <div className='md:pt-32 pt-28 pb-12'>
                 <div className='container'>
                     <div className='text-center'>
                         <h1 className='text-[40px] text-black font-berlin pb-3 leading-[50px] font-semibold'>Get in touch!</h1>
