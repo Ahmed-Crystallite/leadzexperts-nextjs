@@ -1,7 +1,7 @@
 import CTA from "../CTA/CTA";
 
 const Advertising = () => {
- let advertisingCard = [
+  let advertisingCard = [
     {
       bgImage: "bg-[url('../../public/facebook-marketing/facebook.png')]",
       title: "Facebook Advertising Services",
@@ -31,27 +31,25 @@ const Advertising = () => {
     <div className="lg:py-16 md:py-12 py-9">
       <div className="container">
         <div className="text-center">
-          <h2 className="text-[38px] leading-[48px] font-extrabold mb-2">Level Up Your Marketing Efforts And Change The Whole Advertising Game With LeadzExperts!</h2>
-          <p className="text-lg font-medium">Our Facebook marketing solutions are the missing pieces of your online lead generation puzzle. We set ourselves on the wheel to offer accelerated growth to your business. Here’s how we connect you to qualified prospects and help you capture their interest in your brand.</p>
+          <h2 className="lg:text-[38px] md:text-3xl text-2xl lg:leading-[48px] font-extrabold mb-2">Level Up Your Marketing Efforts And Change The Whole Advertising Game With LeadzExperts!</h2>
+          <p className="lg:text-lg md:text-base text-sm font-medium">Our Facebook marketing solutions are the missing pieces of your online lead generation puzzle. We set ourselves on the wheel to offer accelerated growth to your business. Here’s how we connect you to qualified prospects and help you capture their interest in your brand.</p>
         </div>
-        <div className="grid grid-cols-4 lg:py-16 md:py-12 py-9">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:py-16 md:py-12 py-9">
           {
             advertisingCard && advertisingCard.map((e, i) => (
-              <>
-                <div key={i} className={`relative ${e.bgImage} group hover:bg-[#006cff] w-[300px] bg-no-repeat bg-contain px-4 py-7 h-[370px] bg-center`}>
-                  <h4 className="text-xl group-hover:text-white font-bold text-black">{e.title}</h4>
-                  <p className="text-sm group-hover:text-white min-h-[220px] font-medium pt-3 pb-10">{e.text}</p>
-                  <CTA
-                    icon=""
-                    bg="bg-transparent"
-                    text={e.CtaText}
-                    border="border border-[#0f75ff]"
-                    color="text-#0f75ff"
-                    margin="mb-4"
-                    hover="group-hover:text-white group-hover:border-white"
-                  />
-                </div>
-              </>
+              <div key={i} className={`relative xl:mb-0 mb-4 ${e.bgImage} group hover:bg-[#006cff] w-[300px] bg-no-repeat md:bg-contain bg-cover px-4 py-7 h-[370px] bg-center`}>
+                <h4 className="text-xl group-hover:text-white font-bold text-black">{e.title}</h4>
+                <p className="text-sm group-hover:text-white min-h-[220px] font-medium pt-3 pb-10">{e.text}</p>
+                <CTA
+                  icon=""
+                  bg="bg-transparent"
+                  text={e.CtaText}
+                  border="border border-[#0f75ff]"
+                  color="text-#0f75ff"
+                  margin="mb-4"
+                  hover="group-hover:text-white group-hover:border-white"
+                />
+              </div>
             ))
           }
         </div>
