@@ -23,18 +23,18 @@ const Dominent = () => {
         },
     ]
     return (
-        <div className="py-16">
+        <div className="xl:py-16 lg:py-14 py-10">
             <div className="container">
-                <div className="text-center w-[85%] mx-auto">
-                    <h2 className="text-[40px] leading-[50px] font-berlin font-extrabold text-black mb-2">We Help You Celebrate Business Authority In The Facebook Dominant Era!</h2>
-                    <p className="text-lg text-black font-extrabold">Connecting With High-Quality Leads Has Never Been Easier Before Facebook Social Media Marketing</p>
+                <div className="text-center lg:w-[85%] w-full lg:mx-auto">
+                    <h2 className="lg:text-[40px] md:text-3xl text-2xl lg:leading-[50px] font-berlin font-extrabold text-black mb-2">We Help You Celebrate Business Authority In The Facebook Dominant Era!</h2>
+                    <p className="lg:text-lg md:text-base text-sm text-black font-extrabold">Connecting With High-Quality Leads Has Never Been Easier Before Facebook Social Media Marketing</p>
                 </div>
-                <div className="grid gap-x-16 grid-cols-3 items-center">
+                <div className="grid lg:gap-x-16 gap-x-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center">
                     {bussinessAuth && bussinessAuth.map((e, i) => (
                         <div key={i} className="mt-12">
                             <Image src={e.icon} alt="Icons" className="block mx-auto" />
-                            <h4 className="text-xl font-bold py-3 text-center">{e.title}</h4>
-                            <p className="font-medium text-[15px] leading-6 text-center">{e.text}</p>
+                            <h4 className="lg:text-xl text-lg font-bold py-3 text-center">{e.title}</h4>
+                            <p className="font-medium lg:text-[15px] text-sm lg:leading-6 text-center">{e.text}</p>
                         </div>
                     ))
                     }

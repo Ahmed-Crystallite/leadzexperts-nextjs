@@ -7,9 +7,9 @@ const NotFound = () => {
         <main>
             <Header bg="bg-black" />
             <section>
-                <div className="h-screen flex items-center text-center">
+                <div className="bg-black h-screen flex items-center text-center">
                     <div className="container">
-                        <h1 className="text-4xl sm:text-5xl xl:text-5xl 2xl:text-6xl font-megat text-black font-normal leading-none mt-10">404 - Page Not Found</h1>
+                        <h1 className="text-4xl sm:text-5xl xl:text-5xl 2xl:text-6xl font-megat text-primary font-semibold leading-none mt-10">404 -Page Not Found</h1>
                     </div>
                 </div>
             </section>

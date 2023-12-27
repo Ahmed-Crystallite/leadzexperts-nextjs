@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 import ComboPackages from "@/components/Home/ComboPackages";
 import Faqs from "@/components/Home/Faqs/Faqs";
 import Form from "@/components/Home/Form";
+import Input from "@/components/Input/Input";
 import Testimonials from "@/components/Testimonial/Testimonials";
 import Advertising from "@/components/facebook-marketing-services/Advertising";
 import Dominent from "@/components/facebook-marketing-services/Dominent";

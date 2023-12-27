@@ -6,7 +6,12 @@ import CTA from "C/CTA/CTA";
 import BlueTick from "media/home/check-blue.png"
 import WhiteTick from "media/home/check-white.png"
 import Satisfaction from "media/home/satisfaction.png"
-const ComboPackages = () => {
+const ComboPackages = ({
+  title = "Complete",
+  beforeImg = "before:bg-[url('../../public/home/ultimate-img.png')]",
+  sec4Image = Satisfaction,
+  featureBg = "bg-blue"
+}) => {
   let seo = [
     {
       text: "Upto 100 Keywords"
@@ -213,10 +218,10 @@ const ComboPackages = () => {
   return (
     <section>
       <div className="lg:py-16 py-12 bg-[url('../../public/home/comboPackages.png')] bg-no-repeat bg-cover bg-center">
-        <div className="relative before:bg-[url('../../public/home/ultimate-img.png')] before:bg-no-repeat before:bg-cover before:bg-center before:absolute before:w-[18%] before:h-full before:lg:block before:hidden">
+        <div className={`relative ${beforeImg} before:bg-no-repeat before:bg-cover before:bg-center before:absolute before:w-[18%] before:h-full before:lg:block before:hidden`}>
           <div className="container">
             <div className="">
-              <h2 className="xl:text-[40px] xl:leading-[50px] md:text-[30px] md:leading-[40px] text-[25px] leading-[35px] text-black text-center font-berlin pb-3">The Complete Internet Marketing Package!</h2>
+              <h2 className="xl:text-[40px] xl:leading-[50px] md:text-[30px] md:leading-[40px] text-[25px] leading-[35px] text-black text-center font-berlin pb-3">The {title} Internet Marketing Package!</h2>
             </div>
           </div>
         </div>
@@ -289,8 +294,8 @@ const ComboPackages = () => {
               </ul>
             </div>
             <div className="px-3 lg:pb-0 pb-4">
-              <Image src={Satisfaction} alt="Icons" width={136} height={134} className="mx-auto pb-5" />
-              <div className="bg-blue py-4 px-2">
+              <Image src={sec4Image} alt="Icons" className="mx-auto pb-5" />
+              <div className={`${featureBg} py-4 px-2`}>
                 <h3 className="lg:text-xl text-lg font-extrabold pb-3 text-white">Features</h3>
                 <ul>
                   {

@@ -3,6 +3,7 @@ import "./globals.css";
 
 // Import Fonts
 import { primary, berlinFont } from "../configs/font"
+import Link from "next/link";
 
 // Export Metadata
 export const metadata = {
@@ -14,6 +15,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
+      <head><link rel="shortcut icon" href="./site-ico.png" /></head>
       <body className={`${primary.variable} ${berlinFont.variable}`}>
         <main>{children}</main>
       </body>

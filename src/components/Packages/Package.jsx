@@ -1,6 +1,6 @@
 "use client"
 // React
-import { useState } from 'react';
+import { useState} from 'react';
 // Next Image
 import Image from 'next/image';
 // Media
@@ -8,7 +8,16 @@ import Done from "media/facebook-marketing/done.png"
 // Components
 import CTA from '../CTA/CTA';
 
-const Package = () => {
+const Package = ({
+    tab1Bg = "bg-[#3681e8]",
+    tab2Bg = "bg-[#3681e8]",
+    tab3Bg = "bg-[#3681e8]",
+    tab1Color = "text-white",
+    tab2Color = "text-white",
+    tab3Color = "text-white",
+    ctaBG = "bg-[#1c6cd9]",
+    ctaHover = "hover:bg-black",
+}) => {
     const [activeTab1, setActiveTab1] = useState("tab1");
     function prices(tabs1) {
         setActiveTab1(tabs1);
@@ -16,7 +25,7 @@ const Package = () => {
     return (
         <>
             <div className='bg-white shadow-[2px_2px_20px_rgb(0,0,0,70%)] w-[400px] mx-auto py-5 rounded-2xl mt-10 flex justify-center gap-x-5'>
-                <button onClick={() => prices("tab1")}  className={`text-base font-bold duration-300 ease-in-out hover:text-[#0056b3] active:bg-black active:text-white block`}>MONTHLY<span className='text-sm block'>(SAVE 10%)</span></button>
+                <button onClick={() => prices("tab1")} className={`text-base font-bold duration-300 ease-in-out hover:text-[#0056b3] active:bg-black active:text-white block`}>MONTHLY<span className='text-sm block'>(SAVE 10%)</span></button>
                 <button onClick={() => prices("tab2")} className={`text-base font-bold duration-300 ease-in-out hover:text-[#0056b3] active:bg-black active:text-white block`}>QUARTERLY<span className='text-sm block'>(SAVE 25%)</span></button>
                 <button onClick={() => prices("tab3")} className={`text-base font-bold duration-300 ease-in-out hover:text-[#0056b3] active:bg-black active:text-white block`}>ANNUALLY<span className='text-sm block'>(SAVE 33%)</span></button>
             </div>
@@ -24,10 +33,10 @@ const Package = () => {
                 <div className='grid grid-cols-3 items-center'>
                     <div>
                         <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                            <div className='bg-[#3681e8] text-left px-2 py-12'>
-                                <p className="text-2xl font-light text-white">The Good Plan</p>
-                                <h3 className="text-[50px] leading-[60px] font-bold text-white">$350<span className="text-xl">/month</span></h3>
-                                <p className='text-sm font-normal text-white'>Ideal For Start-ups That Need Help Getting Started On Social Media</p>
+                            <div className={` ${tab1Bg} ${tab1Color} text-left px-2 py-12`}>
+                                <p className="text-2xl font-light">The Good Plan</p>
+                                <h3 className="text-[50px] leading-[60px] font-bold">$350<span className="text-xl">/month</span></h3>
+                                <p className='text-sm font-normal'>Ideal For Start-ups That Need Help Getting Started On Social Media</p>
                             </div>
                             <div className={`scroll-smooth h-[500px] overflow-y-scroll px-4 py-4`}>
                                 <h5 className='mb-2 text-base font-extrabold'>
@@ -77,10 +86,10 @@ const Package = () => {
                             <div className='pt-10 pb-2 px-6'>
                                 <CTA
                                     text="Order Now"
-                                    bg='bg-[#1c6cd9]'
+                                    bg={ctaBG}
                                     icon=''
                                     width='w-full'
-                                    hover="hover:bg-black"
+                                    hover={ctaHover}
                                 />
                                 <CTA
                                     text="Call (346)-299-2221"
@@ -95,10 +104,10 @@ const Package = () => {
                     <div>
                         <div>
                             <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                                <div className='bg-[#3681e8] text-left px-2 py-12'>
-                                    <p className="text-2xl font-light text-white">The Better Plan</p>
-                                    <h3 className="text-[50px] leading-[60px] font-bold text-white">$700<span className="text-xl">/month</span></h3>
-                                    <p className='text-sm font-normal text-white'>Percect For Small Businesses Ready To Take Their Business To The Next Level.</p>
+                                <div className={` ${tab1Bg} ${tab1Color} text-left px-2 py-12`}>
+                                    <p className="text-2xl font-light">The Better Plan</p>
+                                    <h3 className="text-[50px] leading-[60px] font-bold">$700<span className="text-xl">/month</span></h3>
+                                    <p className='text-sm font-normal'>Percect For Small Businesses Ready To Take Their Business To The Next Level.</p>
                                 </div>
                                 <div className={`scroll-smooth h-[500px] overflow-y-scroll px-4 py-4`}>
                                     <h5 className='mb-2 text-base font-extrabold'>
@@ -148,10 +157,10 @@ const Package = () => {
                                 <div className='pt-10 pb-2 px-6'>
                                     <CTA
                                         text="Order Now"
-                                        bg='bg-[#1c6cd9]'
+                                        bg={ctaBG}
                                         icon=''
                                         width='w-full'
-                                        hover="hover:bg-black"
+                                        hover={ctaHover}
                                     />
                                     <CTA
                                         text="Call (346)-299-2221"
@@ -167,10 +176,10 @@ const Package = () => {
                     <div>
                         <div>
                             <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                                <div className='bg-[#3681e8] text-left px-2 py-12'>
-                                    <p className="text-2xl font-light text-white">The Best Plan</p>
-                                    <h3 className="text-[50px] leading-[60px] font-bold text-white">$1000<span className="text-xl">/month</span></h3>
-                                    <p className='text-sm font-normal text-white'>Tailored For Successful Businesses That Are Looking To Outsource Their Social Media.</p>
+                                <div className={` ${tab1Bg} ${tab1Color} text-left px-2 py-12`}>
+                                    <p className="text-2xl font-light">The Best Plan</p>
+                                    <h3 className="text-[50px] leading-[60px] font-bold">$1000<span className="text-xl">/month</span></h3>
+                                    <p className='text-sm font-normal'>Tailored For Successful Businesses That Are Looking To Outsource Their Social Media.</p>
                                 </div>
                                 <div className={`scroll-smooth h-[500px] overflow-y-scroll px-4 py-4`}>
                                     <h5 className='mb-2 text-base font-extrabold'>
@@ -220,10 +229,10 @@ const Package = () => {
                                 <div className='pt-10 pb-2 px-6'>
                                     <CTA
                                         text="Order Now"
-                                        bg='bg-[#1c6cd9]'
+                                        bg={ctaBG}
                                         icon=''
                                         width='w-full'
-                                        hover="hover:bg-black"
+                                        hover={ctaHover}
                                     />
                                     <CTA
                                         text="Call (346)-299-2221"
@@ -242,10 +251,10 @@ const Package = () => {
                 <div className='grid grid-cols-3 items-center'>
                     <div>
                         <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                            <div className='bg-[#3681e8] text-left px-2 py-12'>
-                                <p className="text-2xl font-light text-white">The Good Plan</p>
-                                <h3 className="text-[50px] leading-[60px] font-bold text-white">$$280<span className="text-xl">/month</span></h3>
-                                <p className='text-sm font-normal text-white'>Ideal For Start-ups That Need Help Getting Started On Social Media</p>
+                            <div className={` ${tab2Bg} ${tab2Color} text-left px-2 py-12`}>
+                                <p className="text-2xl font-light">The Good Plan</p>
+                                <h3 className="text-[50px] leading-[60px] font-bold">$$280<span className="text-xl">/month</span></h3>
+                                <p className='text-sm font-normal'>Ideal For Start-ups That Need Help Getting Started On Social Media</p>
                             </div>
                             <div className={`scroll-smooth h-[500px] overflow-y-scroll px-4 py-4`}>
                                 <h5 className='mb-2 text-base font-extrabold'>
@@ -295,10 +304,10 @@ const Package = () => {
                             <div className='pt-10 pb-2 px-6'>
                                 <CTA
                                     text="Order Now"
-                                    bg='bg-[#1c6cd9]'
+                                    bg={ctaBG}
                                     icon=''
                                     width='w-full'
-                                    hover="hover:bg-black"
+                                    hover={ctaHover}
                                 />
                                 <CTA
                                     text="Call (346)-299-2221"
@@ -313,10 +322,10 @@ const Package = () => {
                     <div>
                         <div>
                             <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                                <div className='bg-[#3681e8] text-left px-2 py-12'>
-                                    <p className="text-2xl font-light text-white">The Better Plan</p>
-                                    <h3 className="text-[50px] leading-[60px] font-bold text-white">$560<span className="text-xl">/month</span></h3>
-                                    <p className='text-sm font-normal text-white'>Percect For Small Businesses Ready To Take Their Business To The Next Level.</p>
+                                <div className={` ${tab2Bg} ${tab2Color} text-left px-2 py-12`}>
+                                    <p className="text-2xl font-light">The Better Plan</p>
+                                    <h3 className="text-[50px] leading-[60px] font-bold">$560<span className="text-xl">/month</span></h3>
+                                    <p className='text-sm font-normal'>Percect For Small Businesses Ready To Take Their Business To The Next Level.</p>
                                 </div>
                                 <div className={`scroll-smooth h-[500px] overflow-y-scroll px-4 py-4`}>
                                     <h5 className='mb-2 text-base font-extrabold'>
@@ -366,10 +375,10 @@ const Package = () => {
                                 <div className='pt-10 pb-2 px-6'>
                                     <CTA
                                         text="Order Now"
-                                        bg='bg-[#1c6cd9]'
+                                        bg={ctaBG}
                                         icon=''
                                         width='w-full'
-                                        hover="hover:bg-black"
+                                        hover={ctaHover}
                                     />
                                     <CTA
                                         text="Call (346)-299-2221"
@@ -385,10 +394,10 @@ const Package = () => {
                     <div>
                         <div>
                             <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                                <div className='bg-[#3681e8] text-left px-2 py-12'>
-                                    <p className="text-2xl font-light text-white">The Best Plan</p>
-                                    <h3 className="text-[50px] leading-[60px] font-bold text-white">$800<span className="text-xl">/month</span></h3>
-                                    <p className='text-sm font-normal text-white'>Tailored For Successful Businesses That Are Looking To Outsource Their Social Media.</p>
+                                <div className={` ${tab2Bg} ${tab2Color} text-left px-2 py-12`}>
+                                    <p className="text-2xl font-light">The Best Plan</p>
+                                    <h3 className="text-[50px] leading-[60px] font-bold">$800<span className="text-xl">/month</span></h3>
+                                    <p className='text-sm font-normal'>Tailored For Successful Businesses That Are Looking To Outsource Their Social Media.</p>
                                 </div>
                                 <div className={`scroll-smooth h-[500px] overflow-y-scroll px-4 py-4`}>
                                     <h5 className='mb-2 text-base font-extrabold'>
@@ -438,10 +447,10 @@ const Package = () => {
                                 <div className='pt-10 pb-2 px-6'>
                                     <CTA
                                         text="Order Now"
-                                        bg='bg-[#1c6cd9]'
+                                        bg={ctaBG}
                                         icon=''
                                         width='w-full'
-                                        hover="hover:bg-black"
+                                        hover={ctaHover}
                                     />
                                     <CTA
                                         text="Call (346)-299-2221"
@@ -460,10 +469,10 @@ const Package = () => {
                 <div className='grid grid-cols-3 items-center'>
                     <div>
                         <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                            <div className='bg-[#3681e8] text-left px-2 py-12'>
-                                <p className="text-2xl font-light text-white">The Good Plan</p>
-                                <h3 className="text-[50px] leading-[60px] font-bold text-white">$210<span className="text-xl">/month</span></h3>
-                                <p className='text-sm font-normal text-white'>Ideal For Start-ups That Need Help Getting Started On Social Media</p>
+                            <div className={` ${tab3Bg} ${tab3Color} text-left px-2 py-12`}>
+                                <p className="text-2xl font-light">The Good Plan</p>
+                                <h3 className="text-[50px] leading-[60px] font-bold">$210<span className="text-xl">/month</span></h3>
+                                <p className='text-sm font-normal'>Ideal For Start-ups That Need Help Getting Started On Social Media</p>
                             </div>
                             <div className={`scroll-smooth h-[500px] overflow-y-scroll px-4 py-4`}>
                                 <h5 className='mb-2 text-base font-extrabold'>
@@ -513,10 +522,10 @@ const Package = () => {
                             <div className='pt-10 pb-2 px-6'>
                                 <CTA
                                     text="Order Now"
-                                    bg='bg-[#1c6cd9]'
+                                    bg={ctaBG}
                                     icon=''
                                     width='w-full'
-                                    hover="hover:bg-black"
+                                    hover={ctaHover}
                                 />
                                 <CTA
                                     text="Call (346)-299-2221"
@@ -531,10 +540,10 @@ const Package = () => {
                     <div>
                         <div>
                             <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                                <div className='bg-[#3681e8] text-left px-2 py-12'>
-                                    <p className="text-2xl font-light text-white">The Better Plan</p>
-                                    <h3 className="text-[50px] leading-[60px] font-bold text-white">$420<span className="text-xl">/month</span></h3>
-                                    <p className='text-sm font-normal text-white'>Percect For Small Businesses Ready To Take Their Business To The Next Level.</p>
+                                <div className={` ${tab3Bg} ${tab3Color} text-left px-2 py-12`}>
+                                    <p className="text-2xl font-light">The Better Plan</p>
+                                    <h3 className="text-[50px] leading-[60px] font-bold">$420<span className="text-xl">/month</span></h3>
+                                    <p className='text-sm font-normal'>Percect For Small Businesses Ready To Take Their Business To The Next Level.</p>
                                 </div>
                                 <div className={`scroll-smooth h-[500px] overflow-y-scroll px-4 py-4`}>
                                     <h5 className='mb-2 text-base font-extrabold'>
@@ -584,10 +593,10 @@ const Package = () => {
                                 <div className='pt-10 pb-2 px-6'>
                                     <CTA
                                         text="Order Now"
-                                        bg='bg-[#1c6cd9]'
+                                        bg={ctaBG}
                                         icon=''
                                         width='w-full'
-                                        hover="hover:bg-black"
+                                        hover={ctaHover}
                                     />
                                     <CTA
                                         text="Call (346)-299-2221"
@@ -603,10 +612,10 @@ const Package = () => {
                     <div>
                         <div>
                             <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                                <div className='bg-[#3681e8] text-left px-2 py-12'>
-                                    <p className="text-2xl font-light text-white">The Best Plan</p>
-                                    <h3 className="text-[50px] leading-[60px] font-bold text-white">$600<span className="text-xl">/month</span></h3>
-                                    <p className='text-sm font-normal text-white'>Tailored For Successful Businesses That Are Looking To Outsource Their Social Media.</p>
+                                <div className={` ${tab3Bg} ${tab3Color} text-left px-2 py-12`}>
+                                    <p className="text-2xl font-light">The Best Plan</p>
+                                    <h3 className="text-[50px] leading-[60px] font-bold">$600<span className="text-xl">/month</span></h3>
+                                    <p className='text-sm font-normal'>Tailored For Successful Businesses That Are Looking To Outsource Their Social Media.</p>
                                 </div>
                                 <div className={`scroll-smooth h-[500px] overflow-y-scroll px-4 py-4`}>
                                     <h5 className='mb-2 text-base font-extrabold'>
@@ -656,10 +665,10 @@ const Package = () => {
                                 <div className='pt-10 pb-2 px-6'>
                                     <CTA
                                         text="Order Now"
-                                        bg='bg-[#1c6cd9]'
+                                        bg={ctaBG}
                                         icon=''
                                         width='w-full'
-                                        hover="hover:bg-black"
+                                        hover={ctaHover}
                                     />
                                     <CTA
                                         text="Call (346)-299-2221"
