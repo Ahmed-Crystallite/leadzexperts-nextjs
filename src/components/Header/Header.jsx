@@ -57,7 +57,7 @@ const Header = ({
                             <li onClick={() => setopenSubMenu((prev) => (!prev))} className={`${styles.hoverable} md:static md:mb-0 mb-5 md:text-white text-black`}>
                                 <CTA text="Services" width="w-max" height="0" padding="p-0" bg="bg-transparent" icon="/header/down-arrow.png" textWeight="font-medium" flexDirection="flex-row-reverse" color="md:text-white text-black" iconCss=" brightness-0 invert " hover={linkHover} />
                                 <div className={`${styles.megaMenu} mt-2 md:top-10 opacity-0 invisible -z-50 md:absolute relative md:right-64 md:w-[40%] w-full text-left shadow-xl bg-white hover:opacity-100 hover:visible hover:z-50`}>
-                                    <ul className={`${!openSubMenu ? "hidden" : ""}`}>
+                                    <ul className={`${!openSubMenu ? "" : "hidden"}`}>
                                         {
                                             dropDownIcons && dropDownIcons.map((e, i) => (<li key={i} className={`font-medium transition-all duration-500 ease-in-out ${linkHover} text-base px-4 my-2 py-1 border-b text-black hover:bg-slate-200`}><Link href={e.href}>
                                                 {e.text}
