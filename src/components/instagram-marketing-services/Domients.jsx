@@ -23,14 +23,14 @@ const Domients = () => {
         },
     ]
     return (
-        <div className="">
+        <div className="md:py-12 py-9">
             <div className="container">
                 <div className="text-center">
-                    <h2 className="text-[40px] leading-[50px] font-extrabold font-berlin text-black relative">Spruce Up Your
-                        <span className="relative bg-gradient-to-r from-[#fe9e3f] to-primary [-webkit-background-clip:text] [-webkit-text-fill-color:#00000021] before:bg-[url('../../public/instagram-marketing/line-1.png')] before:bg-no-repeat before:bg-cover before:bg-center before:absolute before:w-full before:h-5 before:top-11"> Brand’s Image </span>
+                    <h2 className="lg:text-[40px] md:text-3xl text-2xl lg:leading-[50px] font-extrabold font-berlin text-black relative">Spruce Up Your
+                        <span className="relative bg-gradient-to-r from-[#fe9e3f] to-primary [-webkit-background-clip:text] [-webkit-text-fill-color:#00000021] md:before:bg-[url('../../public/instagram-marketing/line-1.png')] before:bg-no-repeat before:bg-cover before:bg-center before:absolute before:w-full before:h-5 before:top-11"> Brand’s Image </span>
                         with Instagram</h2>
                 </div>
-                <div className="grid gap-x-10 grid-cols-3 py-12">
+                <div className="grid gap-x-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:py-12 py-0">
                     {bussinessAuth && bussinessAuth.map((e, i) => (
                         <div key={i} className="mt-12">
                             <Image src={e.icon} alt="Icons" className="block mx-auto" />

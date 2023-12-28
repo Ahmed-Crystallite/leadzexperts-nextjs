@@ -23,15 +23,15 @@ const Confused = () => {
         },
     ]
     return (
-        <div className="py-16">
+        <div className="lg:py-16 md:py-12 py-9">
             <div className="container">
-                <div className="text-center pb-16">
-                    <h2 className="text-[40px] leading-[50px] px-4 text-black font-extrabold">Confused Why LeadzExperts for Your Business? Because We Know The ART of Marketing and SCIENCE of Sales!</h2>
+                <div className="text-center lg:pb-16 md:pb-12 pb-9">
+                    <h2 className="lg:text-[40px] md:text-3xl text-2xl lg:leading-[50px] lg:px-4 text-black font-extrabold">Confused Why LeadzExperts for Your Business? Because We Know The ART of Marketing and SCIENCE of Sales!</h2>
                 </div>
-                <div className="grid grid-cols-3 gap-x-8">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-8">
                     {
                         service && service.map((e, i) => (
-                            <div key={i} className="text-center">
+                            <div key={i} className="text-center lg:mb-0 mb-4">
                                 <Image src={e.icon} alt="Icons" className="block mx-auto mb-2" />
                                 <h5 className="text-base font-bold mb-2 xxl:min-h-0 lg:min-h-[40px]">{e.title}</h5>
                                 <p className="text-sm font-medium">{e.text}</p>

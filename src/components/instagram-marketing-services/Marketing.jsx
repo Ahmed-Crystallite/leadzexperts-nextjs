@@ -41,19 +41,19 @@ const Marketing = () => {
         },
     ]
     return (
-        <div className="py-16">
+        <div className="lg:py-16 md:py-12 py-9">
             <div className="container">
-                <div className="pb-16 text-center">
-                    <h2 className="text-[50px] leading-[60px] font-berlin text-black mb-3">Our <span className="relative bg-gradient-to-r from-[#fe9e3f] to-primary [-webkit-background-clip:text] [-webkit-text-fill-color:#00000021] before:absolute before:bg-[url('../../public/instagram-marketing/line-1.png')] before:bg-cover bg-no-repeat bg-center before:w-full before:h-4 before:top-12">Instagram</span> Marketing Services</h2>
-                    <p className="lg:px-32 text-[15px] text-black font-medium">With everything from strategy creation to campaign analysis, we can help you achieve your Instagram objective of choice, whether it be to raise awareness, increase consideration, or earn conversions.</p>
+                <div className="lg:pb-16 md:pb-12 pb-9 text-center">
+                    <h2 className="lg:text-[50px] md:text-[40px] text-3xl lg:leading-[60px] md:leading-[50px] font-berlin text-black mb-3">Our <span className="relative bg-gradient-to-r from-[#fe9e3f] to-primary [-webkit-background-clip:text] [-webkit-text-fill-color:#00000021] before:absolute md:before:bg-[url('../../public/instagram-marketing/line-1.png')] before:bg-cover bg-no-repeat bg-center before:w-full before:h-4 before:top-12">Instagram</span> Marketing Services</h2>
+                    <p className="lg:px-32 md:text-[15px] text-sm text-black font-medium">With everything from strategy creation to campaign analysis, we can help you achieve your Instagram objective of choice, whether it be to raise awareness, increase consideration, or earn conversions.</p>
                 </div>
-                <div className="grid grid-cols-3 gap-y-10 items-center">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-7 items-center">
                     {
                         service && service.map((e, i) => (
                             <div key={i} className="text-center">
                                 <Image src={e.icon} alt="Icons" className="block mx-auto mb-2" />
-                                <h5 className="text-lg font-bold mb-2">{e.title}</h5>
-                                <p className="text-[15px] font-normal">{e.text}</p>
+                                <h5 className="md:text-lg text-base font-bold mb-2">{e.title}</h5>
+                                <p className="md:text-[15px] text-sm font-normal">{e.text}</p>
                             </div>
                         ))
                     }
