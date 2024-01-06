@@ -55,8 +55,8 @@ const Header = ({
                         <ul className={`${!toggler ? "hidden md:flex" : "md:flex"} md:gap-9 items-center md:relative sm:absolute xs:absolute md:bg-inherit bg-white pl-3 z-50 md:w-auto w-full top-full left-0 right-0 text-start md:text-center md:py-0 py-5 md:justify-center justify-between`}>
                             <li className="md:text-white md:mb-0 mb-5 text-black"><Link href="/" className={`relative block transition-all duration-500 ease-in-out text-sm lg:text-base font-medium ${linkHover}`}>Home</Link></li>
                             <li onClick={() => setopenSubMenu((prev) => (!prev))} className={`${styles.hoverable} md:static md:mb-0 mb-5 md:text-white text-black`}>
-                                <CTA text="Services" width="w-max" height="0" padding="p-0" bg="bg-transparent" icon="/header/down-arrow.png" textWeight="font-medium" flexDirection="flex-row-reverse" color="md:text-white text-black" iconCss=" brightness-0 invert " hover={linkHover} />
-                                <div className={`${styles.megaMenu} mt-2 md:top-10 opacity-0 invisible -z-50 md:absolute relative md:right-64 md:w-[40%] w-full text-left shadow-xl bg-white hover:opacity-100 hover:visible hover:z-50`}>
+                                <CTA text="Services" width="w-max" height="0" padding="p-0" bg="bg-transparent" icon="/header/down-arrow.png" textWeight="font-medium" flexDirection="flex-row-reverse" color="md:text-white text-black" iconCss="md:brightness-100 brightness-0" hover={linkHover} />
+                                <div className={`${styles.megaMenu} mt-2 md:top-10 md:opacity-0 md:invisible -z-50 md:absolute relative md:right-64 md:w-[40%] w-full text-left shadow-xl bg-white hover:opacity-100 hover:visible hover:z-50`}>
                                     <ul className={`${!openSubMenu ? "hidden" : ""}`}>
                                         {
                                             dropDownIcons && dropDownIcons.map((e, i) => (<li key={i} className={`font-medium transition-all duration-500 ease-in-out ${linkHover} text-base px-4 my-2 py-1 border-b text-black hover:bg-slate-200`}><Link href={e.href}>

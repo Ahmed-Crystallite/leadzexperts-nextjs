@@ -5,7 +5,18 @@ import Image from "next/image";
 import Check from "media/home/check-icon.png"
 // Components
 import CTA from "C/CTA/CTA";
-const Packages = () => {
+const Sparking = ({
+    beforeTable = "before:bg-[url('../../public/home/table-before.png')]",
+    ctaTable = "bg-[#d984ca]",
+    title = "SPARKING YOUR BRAND UP WITH COST-EFFECTIVE SOCIAL MEDIA MARKETING SERVICES",
+    text = "LeadzExperts takes care of your wallet from getting holed with its affordable social media services. No matter the size and shape of your brand, we have multiple packages to suit your needs and requirements.",
+    beforeHead = "before:bg-[url('../../public/home/line.png')]",
+    headBg = "bg-[#d984ca]",
+    headEvenBg = "even:bg-[#CB77BC]",
+    tableBottomBg = "bg-[#d984ca]",
+    tableBottomBg2 = "bg-[#CB77BC]",
+    first = "first:text-white",
+}) => {
     let tableHead = [
         {
             theading: "FEATURES"
@@ -78,13 +89,13 @@ const Packages = () => {
     ]
     return (
         <section>
-            <div className="relative lg:py-16 py-12 before:xl:block before:hidden before:absolute before:bg-[url('../../public/home/table-before.png')] before:bg-no-repeat before:bg-cover before:bg-center before:w-[9.2rem] before:h-[64%] before:-left-0 before:-z-20 before:object-contain">
+            <div className={`relative lg:py-16 py-12 before:xl:block before:hidden before:absolute ${beforeTable} before:bg-no-repeat before:bg-cover before:bg-center before:w-[9.2rem] before:h-[64%] before:-left-0 before:-z-20 before:object-contain`}>
                 <div className='container'>
                     <div className='text-center'>
-                        <div className="relative before:bg-[url('../../public/home/line.png')] before:bg-no-repeat before:bg-cover before:bg-center before:absolute before:w-2/4 xl:before:bottom-2 before:right-64 before:h-2 before:xl:block before:hidden">
-                            <h2 className='xl:text-[40px] xl:leading-[50px] md:text-[30px] md:leading-[40px] text-[25px] leading-[35px] text-black font-berlin pb-3'>SPARKING YOUR BRAND UP WITH COST-EFFECTIVE SOCIAL MEDIA MARKETING SERVICES</h2>
+                        <div className={`relative ${beforeHead} before:bg-no-repeat before:bg-cover before:bg-center before:absolute before:w-2/4 xl:before:bottom-2 before:right-64 before:h-2 before:xl:block before:hidden`}>
+                            <h2 className='xl:text-[40px] xl:leading-[50px] md:text-[30px] md:leading-[40px] text-[25px] leading-[35px] text-black font-berlin pb-3'>{title}</h2>
                         </div>
-                        <p className='text-lg px-12 pt-2'>LeadzExperts takes care of your wallet from getting holed with its affordable social media services. No matter the size and shape of your brand, we have multiple packages to suit your needs and requirements.</p>
+                        <p className='text-lg lg:px-12 pt-2'>{text}</p>
                     </div>
                     <div className="lg:overflow-hidden overflow-x-scroll">
                             <table className="table-auto border xl:w-[90%] w-full xl:mx-auto mt-14 mb-6">
@@ -92,7 +103,7 @@ const Packages = () => {
                                     <tr>
                                         {
                                             tableHead && tableHead.map((e, i) => (
-                                                <th scope="col" key={i} className="py-5 px-2 bg-[#d984ca] first:text-white even:bg-[#CB77BC] w-max ">{e.theading}</th>
+                                                <th scope="col" key={i} className={`py-5 px-2 ${headBg} ${first} ${headEvenBg} w-max`}>{e.theading}</th>
                                             ))
                                         }
                                     </tr>
@@ -120,7 +131,7 @@ const Packages = () => {
                                                 textSize="text-sm"
                                                 icon=""
                                                 color="black"
-                                                bg="bg-[#d984ca]"
+                                                bg={ctaTable}
                                                 width="w-max"
                                                 padding="py-7 px-3"
                                                 margin="mx-auto my-2"
@@ -132,7 +143,7 @@ const Packages = () => {
                                                 textSize="text-sm"
                                                 icon=""
                                                 color="black"
-                                                bg="bg-[#d984ca]"
+                                                bg={ctaTable}
                                                 width="w-max"
                                                 padding="py-7 px-3"
                                                 margin="mx-auto my-2"
@@ -144,7 +155,7 @@ const Packages = () => {
                                                 textSize="text-sm"
                                                 icon=""
                                                 color="black"
-                                                bg="bg-[#d984ca]"
+                                                bg={ctaTable}
                                                 width="w-max"
                                                 padding="py-7 px-3"
                                                 margin="mx-auto my-2"
@@ -156,7 +167,7 @@ const Packages = () => {
                                                 textSize="text-sm"
                                                 icon=""
                                                 color="black"
-                                                bg="bg-[#d984ca]"
+                                                bg={ctaTable}
                                                 width="w-max"
                                                 padding="py-7 px-3"
                                                 margin="mx-auto my-2"
@@ -170,8 +181,8 @@ const Packages = () => {
                     <table className="table-auto border xl:w-[90%] w-full xl:mx-auto mt-6">
                         <tbody className="text-center font-semibold">
                             <tr>
-                                <th className="py-3 px-2 bg-[#d984ca] w-2/4">FEATURES</th>
-                                <th className="py-3 px-2 bg-[#CB77BC]">Price</th>
+                                <th className={`py-3 px-2 ${tableBottomBg} w-2/4`}>FEATURES</th>
+                                <th className={`py-3 px-2 ${tableBottomBg2}`}>Price</th>
                             </tr>
                             <tr>
                                 <td className="border py-3 px-2 first:text-left">Email Drip (1 sequence, 4 emails)</td>
@@ -214,4 +225,4 @@ const Packages = () => {
     )
 }
 
-export default Packages;
+export default Sparking;

@@ -28,7 +28,7 @@ const Faqs = (props) => {
             <div className="container">
                 <div className="lg:py-16 md:py-14 py-10">
                     <div className="flex flex-col justify-center">
-                        <h2 className="xl:text-[50px] xl:leading-[60px] md:text-[30px] md:leading-[40px] text-[25px] leading-[35px] text-black text-center font-berlin pb-3">Frequently Asked Questions</h2>
+                        <h2 className="xl:text-[50px] xl:leading-[60px] md:text-[30px] md:leading-[40px] text-[25px] leading-[35px] text-black text-center font-berlin lg:pb-10 pb-5">Frequently Asked Questions</h2>
                         <div>
                             {
                                 faqstoggler && faqstoggler.map((e, i) => (

@@ -251,7 +251,7 @@ const Package = ({
                         packageContent && packageContent.map((e, i) => (
                             <swiper-slide key={i}>
                                 <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                                    <div className={` ${tab1Bg} ${tab1Color} text-left px-2 py-12`}>
+                                    <div className={` ${tab2Bg} ${tab2Color} text-left px-2 py-12`}>
                                         <p className="text-2xl font-light">{e.plansType}</p>
                                         <h3 className="text-[50px] leading-[60px] font-bold">{e.amount2}<span className="text-xl">{e.limit}</span></h3>
                                         <p className='text-sm font-normal'>{e.text}</p>
@@ -336,7 +336,7 @@ const Package = ({
                         packageContent && packageContent.map((e, i) => (
                             <swiper-slide key={i}>
                                 <div className='text-left border border-[rgba(128,128,128,.5)]'>
-                                    <div className={` ${tab1Bg} ${tab1Color} text-left px-2 py-12`}>
+                                    <div className={` ${tab3Bg} ${tab3Color} text-left px-2 py-12`}>
                                         <p className="text-2xl font-light">{e.plansType}</p>
                                         <h3 className="text-[50px] leading-[60px] font-bold">{e.amount3}<span className="text-xl">{e.limit}</span></h3>
                                         <p className='text-sm font-normal'>{e.text}</p>

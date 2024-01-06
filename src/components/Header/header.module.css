@@ -1,6 +1,5 @@
 .megaMenu {
     transition: all 0.15s linear 0.1;
-
 }
 
 .hoverable:hover .megaMenu {

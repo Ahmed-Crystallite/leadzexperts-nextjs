@@ -10,7 +10,8 @@ const ComboPackages = ({
   title = "Complete",
   beforeImg = "before:bg-[url('../../public/home/ultimate-img.png')]",
   sec4Image = Satisfaction,
-  featureBg = "bg-blue"
+  featureBg = "bg-blue",
+  CTABg = "bg-blue"
 }) => {
   let seo = [
     {
@@ -331,7 +332,7 @@ const ComboPackages = ({
               <div className="pt-4">
                 <CTA
                   text="Request a Quote"
-                  bg="bg-blue"
+                  bg={CTABg}
                   height="h-9"
                   icon=""
                   width="w-max"

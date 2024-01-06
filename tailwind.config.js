@@ -31,6 +31,7 @@ module.exports = {
         third: "#039f50",
         black: "#222222",
         yellow: "#fabb1a",
+        green: "#00d9a5",
       },
     },
   },

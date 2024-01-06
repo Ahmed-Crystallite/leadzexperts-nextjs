@@ -1,10 +1,10 @@
 // Next
 import Image from "next/image";
 const ServicesCard = (props) => {
-    const { texts, icons, titles } = props;
+    const { texts, icons, titles , minHeight,padding } = props;
     return (
-        <div className="min-h-[400px]">
-            <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-1000 ease-in-out [transform-style:preserve-3d] group hover:[transform:rotateY(180deg)]">
+        <div className={`${minHeight}`}>
+            <div className={`relative h-full w-full ${padding} rounded-xl shadow-xl transition-all duration-1000 ease-in-out [transform-style:preserve-3d] group hover:[transform:rotateY(180deg)]`}>
                 <div className="rounded-2xl p-4 absolute flex flex-col item-center justify-center gap-5 bg-[#171616] [backface-visibility:hidden]
                                 [webkit-backface-visibility:hidden] z-10 w-full h-full top-0 right-0 left-0 bottom-0">
                     <Image src={icons} alt="icon" className="mx-auto object-cover" />
